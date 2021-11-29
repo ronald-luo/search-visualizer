@@ -1,4 +1,4 @@
-# Conway's Game of Life Simuation
+# Graph Searching Simuation (BFS and DFS)
 
 Check out Search Simulation [HERE](https://ronald-luo.github.io/search-visualizer)
 
