@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&display=swap");
+/* background colors */
+$color_1: #151515;
+$color_2: #242424;
+$color_3: #3b3b3b;
+
+/* main colors */
+$color_4: #39cec8;
+$color_5: #ce4433;
+
+/* text colors */
+$color_6: #3d99f5;
+$color_7: #ffffff;
+$color_8: #c3bfbc;
+$color_9: #a09d9a;
+
+$padding: 3em;
+$font1: "Poppins", sans-serif;
+$font2: "Lora", serif;
+$phone: 840px;
+
+@mixin phone {
+  @media (max-width: #{$phone}) {
+    @content;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.game-container {
+  background-color: $color_3;
+  height: 80vh;
+  display: flex;
+  //   border: 1px solid white;
+}
+
+.game-of-life {
+  display: grid;
+  grid-template-columns: repeat(65, 15px);
+  grid-template-rows: repeat(35, 15px);
+  border: 1px solid white;
+  align-self: center;
+  margin: 0 auto 0 auto;
+}
+
+.cell {
+  height: 15px;
+  width: 15px;
+
+  &:hover {
+    border: 1px solid white;
+  }
+}
+
+.seen {
+  background-color: $color_5;
+  //   border: 1px solid black;
+}
+
+.target {
+  background-color: $color_4;
+  //   border: 1px solid black;
+}
+
+.unseen {
+  background-color: $color_2;
+  //   border: 1px solid black;
+}
+
+.btn {
+  width: auto;
+  height: 80px;
+  // border: 2px solid $color_4;
+  background-color: $color_1;
+  border-radius: 0px;
+  margin: 0 0 25px 0;
+  display: flex;
+  justify-content: center;
+
+  h2 {
+    color: $color_7;
+    align-self: center;
+    font-size: 18px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten($color_1, 4);
+    border: 1px solid white;
+  }
+}
